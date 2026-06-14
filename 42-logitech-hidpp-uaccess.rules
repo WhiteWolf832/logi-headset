@@ -1,0 +1,15 @@
+# Donne a l'utilisateur de session l'acces aux peripheriques HID++ Logitech
+# (recepteurs Unifying/Bolt/LIGHTSPEED + appareils USB directs comme le G733).
+# Permet a Solaar — et a notre demon G733 — de parler au hidraw sans sudo.
+#
+# Installation :
+#   sudo cp 42-logitech-hidpp-uaccess.rules /etc/udev/rules.d/
+#   sudo udevadm control --reload-rules && sudo udevadm trigger
+#   puis debrancher/rebrancher les recepteurs (ou redemarrer).
+
+ACTION!="add|change", GOTO="logi_hidpp_end"
+
+# Tous les peripheriques Logitech (idVendor 046d) exposes en hidraw.
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="046d", TAG+="uaccess"
+
+LABEL="logi_hidpp_end"

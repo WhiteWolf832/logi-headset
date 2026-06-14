@@ -1,0 +1,16 @@
+# Rust build artifacts
+target/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local exploration / probe scripts — kept on disk, not part of the published tool
+/battery_probe.py
+/g733_playpause.py
+/gkey_divert_test.py
+/gkey_watch.py
+/hidpp_probe.py
+/led_off_test.py
+/led_zones_test.py
+/reconnect_capture.py

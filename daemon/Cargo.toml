@@ -1,0 +1,19 @@
+[package]
+name = "logi-headset"
+version = "1.0.0"
+edition = "2021"
+description = "Logitech G733 : bouton mute -> Play/Pause + extinction LED (HID++ natif)"
+license = "GPL-3.0-or-later"
+
+[dependencies]
+libc = "0.2"
+
+[[bin]]
+name = "logi-headset"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+panic = "abort"

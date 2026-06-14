@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=Application
+Name=Logitech Headset — Configuration
+Name[fr]=Casque Logitech — Configuration
+Name[de]=Logitech-Headset — Konfiguration
+Name[it]=Cuffie Logitech — Configurazione
+Name[es]=Casco Logitech — Configuración
+Name[pt]=Headset Logitech — Configuração
+Comment=Configure the mute button, LEDs and battery alert of a Logitech wireless headset
+Comment[fr]=Configurer le bouton mute, les LED et l'alerte batterie d'un casque Logitech sans fil
+Comment[de]=Stummschalttaste, LEDs und Akkuwarnung eines Logitech-Funk-Headsets konfigurieren
+Comment[it]=Configura il pulsante muto, i LED e l'avviso batteria di cuffie Logitech wireless
+Comment[es]=Configurar el botón de silencio, los LED y el aviso de batería de un casco Logitech inalámbrico
+Comment[pt]=Configurar o botão de silêncio, os LEDs e o aviso de bateria de um headset Logitech sem fios
+Exec=logi-headset-config
+Icon=audio-headset
+Terminal=false
+Categories=Settings;Utility;

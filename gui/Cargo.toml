@@ -1,0 +1,22 @@
+[package]
+name = "logi-headset-config"
+version = "1.0.0"
+edition = "2021"
+description = "Panneau de configuration pour casques Logitech HID++ (GTK4)"
+license = "GPL-3.0-or-later"
+
+[dependencies]
+gtk = { version = "0.9", package = "gtk4", features = ["v4_10"] }
+# libadwaita : fenetre Adwaita -> le WM la centre NATIVEMENT (adwaita ne pose pas
+# de hint de position, contrairement a une GtkApplicationWindow nue), sans hack
+# X11 et y compris sous Wayland ; + barre de titre moderne. S'apparie a gtk4 0.9.
+adw = { version = "0.7", package = "libadwaita", features = ["v1_4"] }
+
+[[bin]]
+name = "logi-headset-config"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true

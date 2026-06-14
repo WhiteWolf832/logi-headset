@@ -1,0 +1,13 @@
+[Unit]
+Description=Logitech wireless headset: mute-button remap + LEDs + battery (HID++)
+Documentation=https://github.com/WhiteWolf832/logi-headset
+
+[Service]
+Type=simple
+# Reads ~/.config/logi-headset/config ; runs WITHOUT root (udev uaccess rule).
+ExecStart=%h/.local/bin/logi-headset
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target
